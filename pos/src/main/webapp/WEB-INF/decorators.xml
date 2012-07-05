@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<decorators defaultdir="/WEB-INF/decorators">
+    <!-- Any urls that are excluded will never be decorated by Sitemesh -->
+    <excludes>
+        <pattern>/styles/*</pattern>
+        <pattern>/scripts/*</pattern>
+        <pattern>/images/*</pattern>
+        <pattern>/nodecorate/*</pattern>
+        <pattern>/items/new*</pattern>
+        <pattern>/customers/new.ps*</pattern>
+        <pattern>/customers/search.ps*</pattern>
+        <pattern>/customers/edit.ps*</pattern>
+        <pattern>/customers/suggest.ps*</pattern>
+        <pattern>/customers/list.ps*</pattern>
+
+
+        <pattern>/suppliers/new.ps*</pattern>
+        <pattern>/suppliers/search.ps*</pattern>
+        <pattern>/suppliers/edit.ps*</pattern>
+        <pattern>/suppliers/suggest.ps*</pattern>
+        <pattern>/suppliers/list.ps*</pattern>
+
+
+        <pattern>/employees/new.ps*</pattern>
+        <pattern>/employees/search.ps*</pattern>
+        <pattern>/employees/edit.ps*</pattern>
+        <pattern>/employees/list.ps*</pattern>
+
+        <pattern>/items/new.ps*</pattern>
+        <pattern>/items/edit.ps*</pattern>
+        <pattern>/items/search.ps*</pattern>
+        <pattern>/items/suggest.ps*</pattern>
+        <pattern>/items/list.ps*</pattern>
+
+        <pattern>/sales/addItem.ps*</pattern>
+        <pattern>/sales/deleteItem.ps*</pattern>
+        <pattern>/sales/editItem.ps*</pattern>
+        <pattern>/sales/addPayment.ps*</pattern>
+        <pattern>/sales/deletePayment.ps*</pattern>
+        <pattern>/sales/addCustomer.ps*</pattern>
+        <pattern>/sales/deleteCustomer.ps*</pattern>
+        <pattern>/sales/addShipping.ps*</pattern>
+        <pattern>/sales/addDiscount.ps*</pattern>
+        <pattern>/sales/deleteShipping.ps*</pattern>
+        <pattern>/sales/deleteDiscount.ps*</pattern>
+        <pattern>/sales/addComment.ps*</pattern>
+        <pattern>/sales/cancel.ps*</pattern>
+        <pattern>/sales/suspend.ps*</pattern>
+        <pattern>/sales/suspended.ps*</pattern>
+        <pattern>/sales/load.ps*</pattern>
+        <pattern>/sales/changeMode.ps*</pattern>
+        <pattern>/sales/unSuspend.ps*</pattern>
+        <pattern>/sales/list.ps*</pattern>
+
+
+        <pattern>/payments/new.ps*</pattern>
+        <pattern>/payments/list.ps*</pattern>
+        <pattern>/payments/search.ps*</pattern>
+        <pattern>/payments/edit.ps*</pattern>
+        <pattern>/payments/update.ps*</pattern>
+        <pattern>/payments/save.ps*</pattern>
+        <pattern>/payments/delete.ps*</pattern>
+        <pattern>/payments/list.ps*</pattern>
+
+
+        <pattern>/purchase/addItem.ps*</pattern>
+        <pattern>/purchase/deleteItem.ps*</pattern>
+        <pattern>/purchase/editItem.ps*</pattern>
+        <pattern>/purchase/addPayment.ps*</pattern>
+        <pattern>/purchase/deletePayment.ps*</pattern>
+        <pattern>/purchase/addCustomer.ps*</pattern>
+        <pattern>/purchase/deleteCustomer.ps*</pattern>
+        <pattern>/purchase/addShipping.ps*</pattern>
+        <pattern>/purchase/cancel.ps*</pattern>
+        <pattern>/purchase/suspend.ps*</pattern>
+        <pattern>/purchase/load.ps*</pattern>
+        <pattern>/purchase/changeMode.ps*</pattern>
+        <pattern>/purchase/list.ps*</pattern>
+
+
+    </excludes>
+
+    <decorator name="main" page="main.jsp">
+        <pattern>/web/*</pattern>
+    </decorator>
+    <decorator name="main" page="main.jsp">
+        <pattern>/pos/*</pattern>
+    </decorator>
+    <decorator name="home" page="main.jsp">
+        <pattern>/home/*</pattern>
+    </decorator>
+    <decorator name="home" page="main.jsp">
+        <pattern>/items/*</pattern>
+    </decorator>
+    <decorator name="home" page="main.jsp">
+        <pattern>/config/*</pattern>
+    </decorator>
+    <decorator name="home" page="main.jsp">
+        <pattern>/sales/*</pattern>
+    </decorator>
+    <decorator name="home" page="main.jsp">
+        <pattern>/home/*</pattern>
+    </decorator>
+    <decorator name="customers" page="main.jsp">
+        <pattern>/customers/*</pattern>
+    </decorator>
+    <decorator name="reports" page="main.jsp">
+        <pattern>/reports/*</pattern>
+    </decorator>
+
+    <decorator name="purchase" page="main.jsp">
+        <pattern>/purchase/*</pattern>
+    </decorator>
+
+    <decorator name="payments" page="main.jsp">
+        <pattern>/payments/*</pattern>
+    </decorator>
+
+
+    <decorator name="employees" page="main.jsp">
+        <pattern>/employees/*</pattern>
+    </decorator>
+
+
+    <decorator name="receipts" page="main.jsp">
+        <pattern>/receipts/*</pattern>
+    </decorator>
+
+    <decorator name="home" page="main.jsp">
+        <pattern>/home/*</pattern>
+    </decorator>
+    <decorator name="home" page="main.jsp">
+        <pattern>/suppliers/*</pattern>
+    </decorator>
+
+
+    <!--<decorator name="panel" page="panel.jsp"/>-->
+    <!--<decorator name="dashedBox" page="dashedBox.jsp"/>-->
+    <!--<decorator name="printable" page="printable.jsp"/>-->
+</decorators>

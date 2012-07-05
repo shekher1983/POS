@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://chandra.com/schema/pos-request/"
+        targetNamespace="http://chandra.com/schema/pos-request/">
+    <element name="LoginRequest" type="hr:login"/>
+
+    <complexType name="login">
+        <all>
+            <element name="Login" type="hr:LoginDetail"/>
+        </all>
+    </complexType>
+    <complexType name="LoginDetail">
+        <sequence>
+            <element name="UserName" type="string"/>
+            <element name="Password" type="string"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="LoginDetailResponse">
+        <sequence>
+            <element name="lastLogin" type="string"/>
+            <element name="authenticated" type="boolean"/>
+        </sequence>
+    </complexType>
+
+</schema>

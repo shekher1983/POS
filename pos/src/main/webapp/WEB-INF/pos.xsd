@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://chandra.com/schema/pos-request/"
+        targetNamespace="http://chandra.com/schema/pos-request/">
+    <element name="POSRequest" type="hr:POSRequestType"/>
+
+    <complexType name="POSRequestType">
+        <all>
+            <element name="POS" type="hr:POSType"/>
+            <element name="Employee" type="hr:EmployeeType"/>
+        </all>
+    </complexType>
+
+    <complexType name="POSType">
+        <sequence>
+            <element name="StartDate" type="date"/>
+            <element name="EndDate" type="date"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="EmployeeType">
+        <sequence>
+            <element name="Number" type="int"/>
+            <element name="FirstName" type="string"/>
+            <element name="LastName" type="string"/>
+        </sequence>
+    </complexType>
+</schema>
