@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+    <package name="reports" extends="default" namespace="/reports">
+        <default-interceptor-ref name="crudStack"/>
+        <default-action-ref name="list"/>
+        <action name="list" class="com.chandra.pos.web.report.action.SalesReportAction" method="doList">
+            <result name="success">/reports/list.jsp</result>
+
+        </action>
+        <action name="ledger" class="com.chandra.pos.web.report.action.SalesReportAction" method="doLedger">
+            <result name="success">/reports/ledger.jsp</result>
+        </action>
+    </package>
+
+
+</struts>

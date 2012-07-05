@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+    <package name="sales" extends="default" namespace="/sales">
+        <default-interceptor-ref name="crudStack"/>
+        <default-action-ref name="home"/>
+
+
+        <action name="new" class="com.chandra.pos.web.sales.action.SalesAction" method="doNew">
+            <result name="input">/sales/new.jsp</result>
+        </action>
+
+        <action name="list" class="com.chandra.pos.web.sales.action.SalesAction" method="doList">
+            <result name="success">/sales/list.jsp</result>
+        </action>
+
+        <action name="home" class="com.chandra.pos.web.sales.action.SalesAction" method="doHome">
+            <result name="success">/sales/home.jsp</result>
+        </action>
+        <action name="search" class="com.chandra.pos.web.sales.action.SalesAction" method="doSearch">
+            <result name="success">/sales/list.jsp</result>
+        </action>
+        <action name="save" class="com.chandra.pos.web.sales.action.SalesAction" method="doSave">
+            <result type="redirect">/sales/</result>
+            <result name="input">/sales/new.jsp</result>
+        </action>
+        <action name="edit" class="com.chandra.pos.web.sales.action.SalesAction" method="doEdit">
+            <result name="input">/sales/editSale.jsp</result>
+        </action>
+        <action name="update" class="com.chandra.pos.web.sales.action.SalesAction" method="doUpdate"/>
+
+
+        <action name="suspend" class="com.chandra.pos.web.sales.action.SalesAction" method="doSuspend">
+            <result name="success">/sales/new.jsp</result>
+        </action>
+        <action name="cancel" class="com.chandra.pos.web.sales.action.SalesAction" method="doCancel">
+            <result name="success">/sales/new.jsp</result>
+        </action>
+
+        <action name="suspended" class="com.chandra.pos.web.sales.action.SalesAction" method="doListSuspended">
+            <result name="success">/sales/listSuspended.jsp</result>
+        </action>
+        <action name="unSuspend" class="com.chandra.pos.web.sales.action.SalesAction" method="doUnSuspend">
+            <result name="success">/sales/new.jsp</result>
+        </action>
+
+        <action name="load" class="com.chandra.pos.web.sales.action.SalesAction" method="doLoad">
+            <result name="success">/sales/new.jsp</result>
+        </action>
+
+
+        <action name="addItem" class="com.chandra.pos.web.sales.action.SalesAction" method="doAddItem">
+            <result name="success">/sales/new.jsp</result>
+            <result name="input">/sales/new.jsp</result>
+        </action>
+        <action name="editItem" class="com.chandra.pos.web.sales.action.SalesAction" method="doEditItem">
+            <result name="success">/sales/new.jsp</result>
+            <result name="input">/sales/new.jsp</result>
+        </action>
+        <action name="deleteItem" class="com.chandra.pos.web.sales.action.SalesAction" method="doDeleteItem">
+            <result name="success">/sales/new.jsp</result>
+            <result name="input">/sales/new.jsp</result>
+        </action>
+        <action name="addPayment" class="com.chandra.pos.web.sales.action.SalesAction" method="doAddPayment">
+            <result name="success">/sales/new.jsp</result>
+            <result name="input">/sales/new.jsp</result>
+
+        </action>
+        <action name="deletePayment" class="com.chandra.pos.web.sales.action.SalesAction" method="doDeletePayment">
+            <result name="success">/sales/new.jsp</result>
+            <result name="input">/sales/new.jsp</result>
+        </action>
+        <action name="addShipping" class="com.chandra.pos.web.sales.action.SalesAction" method="doAddShipping">
+            <result name="success">/sales/new.jsp</result>
+            <result name="input">/sales/new.jsp</result>
+        </action>
+        <action name="deleteShipping" class="com.chandra.pos.web.sales.action.SalesAction" method="doDeleteShipping">
+            <result name="success">/sales/new.jsp</result>
+            <result name="input">/sales/new.jsp</result>
+        </action>
+        <action name="addCustomer" class="com.chandra.pos.web.sales.action.SalesAction" method="doAddCustomer">
+            <result name="success">/sales/new.jsp</result>
+            <result name="input">/sales/new.jsp</result>
+        </action>
+        <action name="deleteCustomer" class="com.chandra.pos.web.sales.action.SalesAction" method="doDeleteCustomer">
+            <result name="success">/sales/new.jsp</result>
+            <result name="input">/sales/new.jsp</result>
+        </action>
+        <action name="reload" class="com.chandra.pos.web.sales.action.SalesAction" method="doDeleteItem">
+            <result name="success">/sales/reloadSale.jsp</result>
+        </action>
+        <action name="delete" class="com.chandra.pos.web.sales.action.SalesAction" method="doDelete">
+            <result name="success">/sales/new.jsp</result>
+        </action>
+
+        <action name="complete" class="com.chandra.pos.web.sales.action.SalesAction" method="doComplete">
+            <result name="success" type="redirectAction">
+                <param name="actionName">orderreceipt</param>
+                <param name="namespace">/receipts</param>
+                <param name="id">${orderEntity.id}</param>
+            </result>
+        </action>
+        <action name="addComment" class="com.chandra.pos.web.sales.action.SalesAction" method="doAddComment">
+            <result name="success" type="">/sales/new.jsp</result>
+        </action>
+
+        <action name="addDiscount" class="com.chandra.pos.web.sales.action.SalesAction" method="doAddDiscount">
+            <result name="success">/sales/new.jsp</result>
+        </action>
+
+        <action name="deleteDiscount" class="com.chandra.pos.web.sales.action.SalesAction" method="doDeleteDiscount">
+            <result name="success">/sales/new.jsp</result>
+        </action>
+
+        <action name="changeMode" class="com.chandra.pos.web.sales.action.SalesAction" method="changeMode">
+            <result name="success">/sales/new.jsp</result>
+        </action>
+
+
+    </package>
+
+
+</struts>

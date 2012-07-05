@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  - Application context containing authentication, channel
+  - security and web URI beans.
+  -
+  - Only used by "filter" artifact.
+  -
+  -->
+
+<b:beans xmlns="http://www.springframework.org/schema/security"
+         xmlns:b="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <!--<global-method-security pre-post-annotations="enabled">-->
+    <!--<expression-handler ref="expressionHandler"/>-->
+    <!--</global-method-security>-->
+
+    <http realm="Contacts Realm">
+        <intercept-url pattern="/" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/index.jsp" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/login.ps*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/items/*" access="ROLE_ADMIN_ITEMS"/>
+        <intercept-url pattern="/sales/*" access="ROLE_ADMIN_SALES"/>
+        <intercept-url pattern="/reports/*" access="ROLE_ADMIN_REPORTS"/>
+        <intercept-url pattern="/config/*" access="ROLE_ADMIN_CONFIG"/>
+        <intercept-url pattern="/customers/*" access="ROLE_ADMIN_CUSTOMERS"/>
+        <intercept-url pattern="/employees/*" access="ROLE_ADMIN_EMPLOYEES"/>
+        <intercept-url pattern="/suppliers/*" access="ROLE_ADMIN_SUPPLIER,ROLE_ADMIN_PURCHASE"/>
+
+        <intercept-url pattern="/payments/*" access="ROLE_ADMIN_PAYMENT"/>
+        <intercept-url pattern="/purchase/*" access="ROLE_ADMIN_PURCHASE"/>
+        <intercept-url pattern="/receipts/*" access="ROLE_ADMIN_PAYMENT,ROLE_ADMIN_SALES"/>
+        <intercept-url pattern="/home/*"
+                       access="ROLE_ADMIN_PURCHASE,ROLE_ADMIN_EMPLOYEES,ROLE_ADMIN_ITEMS,ROLE_ADMIN_CONFIG,ROLE_ADMIN_PAYMENT,ROLE_ADMIN_PAYMENT,ROLE_ADMIN_SALES"/>
+        <intercept-url pattern="/css/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/js/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/images/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+         <intercept-url pattern="/data/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/**" access="ROLE_USER"/>
+        <form-login login-page="/login.ps" authentication-failure-url="/login.ps?login_error=1"/>
+        <http-basic/>
+        <logout logout-success-url="/index.jsp"/>
+        <remember-me/>
+
+    </http>
+
+    <authentication-manager>
+        <authentication-provider user-service-ref="userDetailsService">
+            <password-encoder ref="passwordEncoder">
+                <salt-source ref="saltSource"/>
+            </password-encoder>
+
+            <!--<password-encoder  hash="sha">-->
+            <!--<salt-source ref="saltSource"/>-->
+            <!--</password-encoder>-->
+        </authentication-provider>
+    </authentication-manager>
+
+
+    <!--<b:bean id="saltSource" class="org.springframework.security.authentication.encoding"  >-->
+    <!--<b:property name="userPropertyToUse"  value="salt"/>-->
+    <!--</b:bean>-->
+
+</b:beans>
