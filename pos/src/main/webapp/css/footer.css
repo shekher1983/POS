@@ -1,0 +1,63 @@
+#footer_info, #footer_spacer, #footer {
+    background-image: url("../images/footer/footer_r3_c1.png");
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 1000px;
+}
+#footer_info {
+    background-position: -10px 0;
+    height: 40px;
+}
+.menu_date {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    text-align: center;
+}
+.mini_date {
+    font-size: 0.55em;
+}
+#menubar_footer {
+    color: #d0d8df;
+    padding-left: 20px;
+}
+#menubar_footer a {
+    color: #FFFFFF;
+}
+#menubar_footer b {
+    color: #FFFFFF;
+}
+#menubar_date_time{
+    width: 80px;
+}
+#menubar_date_day{
+    width: 20px;
+}
+#menubar_date_spacer {
+    width: 20px;
+}
+#menubar_date_date {
+    width: 40px;
+}
+#menubar_date_monthyr {
+    padding-right: 20px;
+    width: 25px;
+}
+
+#footer_spacer {
+    background-position: -10px -40px;
+    height: 10px;
+}
+
+#footer {
+    background-position: -10px -50px;
+    font-size: 0.65em;
+    height: 20px;
+    color:#555;
+}
+#footer_version{
+	text-align:right;
+}
+#footer a{
+	font-weight:bold;
+	color:#27d;
+}

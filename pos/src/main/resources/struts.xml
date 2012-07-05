@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+
+    <!-- Some or all of these can be flipped to true for debugging -->
+    <constant name="struts.i18n.reload" value="false"/>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.configuration.xml.reload" value="true"/>
+    <constant name="struts.custom.i18n.resources" value="globalMessages"/>
+    <constant name="struts.action.extension" value="ps,,"/>
+    <!--<constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory"/>-->
+
+    <constant name="struts.freemarker.manager.classname" value="freemarkerManager"/>
+    <constant name="struts.serve.static" value="true"/>
+    <constant name="struts.serve.static.browserCache" value="false"/>
+    <!--<constant name="struts.objectFactory.spring.autoWire" value="type" ></constant>-->
+    <package name="default" extends="json-default">
+        <interceptors>
+            <interceptor-stack name="crudStack">
+                <interceptor-ref name="defaultStack">
+                    <param name="validation.excludeMethods">doNew,doList,doEdit,doSearch,doSuggest,doHome</param>
+                    <param name="workflow.excludeMethods">doNew,doList,doEdit,doSearch,doSuggest,doHome</param>
+                </interceptor-ref>
+            </interceptor-stack>
+            <interceptor-stack name="tokenStack">
+                <interceptor-ref name="token"/>
+                <interceptor-ref name="defaultStack">
+                    <param name="validation.excludeMethods">doNew,doList,doEdit,doSearch,doSuggest</param>
+                    <param name="workflow.excludeMethods">doNew,doList,doEdit,doSearch,doSuggest</param>
+                </interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <default-action-ref name="showcase"/>
+        <action name="showcase">
+            <result type="chain">
+                <param name="actionName">dashboard</param>
+                <param name="namespace">/home</param>
+            </result>
+        </action>
+        <action name="login">
+            <result>login.jsp</result>
+        </action>
+    </package>
+
+    <include file="struts-customers.xml"/>
+    <include file="struts-employees.xml"/>
+    <include file="struts-config.xml"/>
+    <include file="struts-payments.xml"/>
+    <include file="struts-sales.xml"/>
+    <include file="struts-reports.xml"/>
+    <include file="struts-items.xml"/>
+    <include file="struts-suppliers.xml"/>
+    <include file="struts-receipts.xml"/>
+    <include file="struts-purchase.xml"/>
+
+
+    <package name="home" extends="default" namespace="/home">
+        <default-interceptor-ref name="crudStack"/>
+        <default-action-ref name="home"/>
+        <action name="home">
+            <result>home.jsp</result>
+        </action>
+    </package>
+
+
+</struts>
+
+        <!-- END SNIPPET: xworkSample -->
+

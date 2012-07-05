@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+    <package name="suppliers" extends="default" namespace="/suppliers">
+        <default-interceptor-ref name="crudStack"/>
+        <default-action-ref name="list"/>
+
+        <action name="save" class="com.chandra.pos.web.supplier.action.SupplierAction" method="doSave">
+            <interceptor-ref name="tokenStack"/>
+            <result type="redirect">/suppliers/</result>
+            <result name="input">/suppliers/new.jsp</result>
+        </action>
+        <action name="edit" class="com.chandra.pos.web.supplier.action.SupplierAction" method="doEdit">
+            <result name="input">/suppliers/edit.jsp</result>
+        </action>
+
+        <action name="update" class="com.chandra.pos.web.supplier.action.SupplierAction" method="doUpdate">
+            <interceptor-ref name="tokenStack"/>
+            <result name="input">/suppliers/edit.jsp</result>
+            <result type="redirect">/suppliers/</result>
+        </action>
+        <action name="new" class="com.chandra.pos.web.supplier.action.SupplierAction" method="doNew">
+            <result name="input">/suppliers/new.jsp</result>
+        </action>
+        <action name="list" class="com.chandra.pos.web.supplier.action.SupplierAction" method="doList">
+            <result name="success">/suppliers/list.jsp</result>
+        </action>
+        <action name="suggest" class="com.chandra.pos.web.supplier.action.SupplierAction" method="doSuggest">
+            <result name="success">/suppliers/suggest.jsp</result>
+        </action>
+        <action name="search" class="com.chandra.pos.web.supplier.action.SupplierAction" method="doSearch">
+            <result name="success">/suppliers/search.jsp</result>
+        </action>
+        <action name="home" class="com.chandra.pos.web.supplier.action.SupplierAction" method="doHome">
+            <result name="success">/suppliers/home.jsp</result>
+        </action>
+
+
+    </package>
+</struts>

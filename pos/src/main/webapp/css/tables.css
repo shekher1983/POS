@@ -1,0 +1,196 @@
+#title_bar {
+    font-size: 1.75em;
+    height: 50px;
+    margin: auto;
+    width: 960px;
+}
+#title_icon {
+    width: 40px;
+}
+#title_icon img {
+    height: 35px;
+}
+#title_search {
+    vertical-align: middle;
+    width: 264px;
+}
+#title_bar input {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    font-size: 0.65em;
+    padding: 6px 10px;
+    vertical-align: top;
+    width: 205px;
+}
+#spinner {
+    display: none;
+}
+#contents {
+    margin: auto;
+    width: 960px;
+}
+#commands {
+    width: 170px;
+}
+#commands a, #commands #items_filter_form div {
+    background-image: url("../images/pieces/buttons.png");
+    color: #FFFFFF;
+    display: block;
+    font-size: 0.7em;
+    font-weight: bold;
+    height: 31px;
+    padding: 7px 0 0 10px;
+    width: 160px;
+}
+#commands #items_filter_form div input {
+    display: none;
+}
+#commands a.new {
+    background-position: -10px -10px;
+}
+#commands a.email {
+    background-position: -10px -50px;
+}
+#commands a.email_inactive {
+    background-position: -10px -90px;
+}
+#commands a.import {
+    background-position: -10px -130px;
+}
+#commands a.cleanup {
+    background-position: -10px -130px;
+}
+#commands a#delete {
+    background-position: -10px -170px;
+}
+#commands a#delete.delete_inactive {
+    background-position: -10px -210px;
+}
+#commands a#bulk_edit {
+    background-position: -10px -250px;
+}
+#commands a#bulk_edit.bulk_edit_inactive {
+    background-position: -10px -290px;
+}
+#commands a#generate_barcodes {
+    background-position: -10px -330px;
+}
+#commands a#generate_barcodes.generate_barcodes_inactive {
+    background-position: -10px -370px;
+}
+#commands a#generate_barcode_labels {
+    background-position: -10px -330px;
+}
+#commands a#generate_barcode_labels.generate_barcodes_inactive {
+    background-position: -10px -370px;
+}
+#commands #inventory {
+    background-position: -10px -410px;
+}
+#commands #serial {
+    background-position: -10px -330px;
+}
+#commands #nondescript {
+    background-position: -10px -450px;
+}
+#contents td {
+    vertical-align: top;
+}
+#item_table {
+    background-image: none;
+    background-position: 0 0;
+}
+#item_table th {
+    background-image: url("../images/pieces/table_body.png");
+    background-position: -15px -80px;
+    border-right: 1px solid #BBBBBB;
+    color: #FFFFFF;
+    font-size: 0.7em;
+    height: 30px;
+    padding: 0 10px;
+    text-align: left;
+}
+#item_table th.leftmost {
+    background-position: left -80px;
+}
+#item_table th.rightmost {
+    background-position: right -80px;
+}
+#item_table .headerSortUp {
+    background-position: right 0;
+}
+#item_table .headerSortDown {
+    background-position: right -40px;
+}
+#item_table .rightmost {
+    border-right: medium none;
+}
+#item_table td {
+    background-color: #E9E9E9;
+    border-bottom: 1px solid #BBBBBB;
+    border-right: 1px solid #BBBBBB;
+    color: #444444;
+    font-size: 0.8em;
+    height: 30px;
+    padding: 0 10px;
+    vertical-align: middle;
+}
+#item_table td.rightmost {
+    padding: 0;
+}
+#item_table td.over {
+    background-color: #CCCCFF;
+    background-image: none;
+}
+#item_table td.selected {
+    background-color: #FFFFCC;
+    background-image: none;
+}
+#table_holder {
+    height: auto;
+    width: auto;
+}
+
+#table_holder .warning_message {
+	background: #FFFFFF;
+	width: 101%;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin-left: -11px;
+}
+
+#sortable_table a {
+    color: #555555;
+}
+#sortable_table input {
+    cursor: pointer;
+}
+#sortable_table .thickbox {
+    font-size: 0.8em;
+    padding: 7px 0;
+    text-align: center;
+    width: 40px;
+}
+#sortable_table .rightmost .thickbox {
+    display: block;
+    padding: 7px;
+}
+
+#sortable_table > tbody > tr {
+	padding: 5px;
+	margin: 5px;
+}
+
+#sortable_table td {
+	word-wrap: break-word;
+}
+
+#sortable_table td.innertable {
+	display: none;
+	border-bottom: 4px solid #111111;
+	padding: 0px;
+}
+
+#sortable_table td .innertable table.innertable {
+	width: 100%;
+}

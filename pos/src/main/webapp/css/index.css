@@ -1,0 +1,556 @@
+#register_container {
+    margin: auto;
+    width: 962px;
+}
+#register_container #cart_contents .warning_message
+{
+	background: none;
+}
+#title_section td {
+    vertical-align: middle;
+}
+#title_section {
+    font-size: 1.75em;
+}
+#title {
+    font-size: 0.915em;
+}
+td#register_wrapper {
+    background: url("../images/pieces/reg_mode.png") no-repeat scroll center center transparent;
+    font-size: 0.8em;
+    height: 49px;
+    line-height: 0;
+    text-align: center;
+    width: 250px;
+}
+#register_wrapper form {
+}
+#register_wrapper span {
+    font-size: 0.55em;
+}
+
+#show_suspended_sales_button {
+    background: url("../images/pieces/view_suspended.png") no-repeat scroll right center transparent;
+    font-size: 0.8em;
+    height: 49px;
+    line-height: 0;
+    text-align: center;
+    width: 230px;
+}
+#show_suspended_sales_button a {
+    color: #FFFFFF;
+    font-size: 0.7em;
+}
+#suspended_sales_table {
+	font-size: 1.2em;
+}
+
+#suspended_sales_table  input[type="submit"]{
+    background: url("../images/pieces/btnUpdate.png") no-repeat top left transparent;
+    color: #FFFFFF;
+    display: block;
+    height: 24px;
+	font-size: 12px;
+	margin: 0 auto;
+	border: 0px;
+	width: 70px;
+    text-align: center;
+}
+
+#register_items_container {
+    width: 732px;
+}
+#over_all_sale_container {
+    width: 220px;
+    height: 590px;
+}
+#reg_item_search {
+    background: url("../images/pieces/reg_item_search.png") no-repeat scroll -9px -9px transparent;
+    height: 30px;
+    padding: 11px 11px 10px;
+}
+#reg_item_search form {
+    vertical-align: middle;
+}
+#reg_item_search input {
+    background: url("../images/pieces/reg_item_search.png") no-repeat scroll -20px -20px transparent;
+    border: medium none;
+    font-size: 1.1em;
+    padding: 4px 10px;
+    width: 470px;
+}
+#new_item_button_register {
+    background: url("../images/pieces/reg_item_search.png") repeat scroll -559px -80px transparent;
+    float: right;
+    font-size: 0.8em;
+    height: 30px;
+    width: 172px;
+}
+#new_item_button_register a {
+    color: #FFFFFF;
+}
+#new_item_button_register a div {
+    padding-left: 20px;
+    padding-top: 5px;
+}
+#register_items_container, #over_all_sale_container {
+    vertical-align: top;
+}
+#register_holder {
+    background: url("../images/pieces/item_empty_large.png") repeat scroll 0 -30px transparent;
+    height: auto;
+	overflow: none;
+    width: 732px;
+}
+#register th {
+    background-image: url("../images/pieces/table_body.png");
+    background-position: -15px -80px;
+    border-right: 1px solid #D0D8DF;
+    color: #FFFFFF;
+    font-size: 0.85em;
+    height: 30px;
+    text-align: left;
+    text-indent: 10px;
+    vertical-align: middle;
+}
+
+th#reg_item_del {
+    width: 60px;
+}
+th#reg_item_name {
+    width: 110px;
+}
+th#reg_item_number {
+    width: 110px;
+}
+th#reg_item_stock {
+    width: 60px;
+}
+th#reg_item_price {
+    width: 90px;
+}
+th#reg_item_qty {
+    width: 50px;
+}
+th#reg_item_discount {
+    width: 60px;
+}
+th#reg_item_total {
+    width: 100px;
+}
+th#reg_item_update {
+    border-right: medium none;
+    width: 90px;
+}
+
+#register td {
+	
+    color: #555555;
+    font-size: 0.85em;
+    height: 30px;
+    vertical-align: middle;
+}
+#register table td {
+    border-right: 1px solid #BBBBBB;
+    color: #555555;
+    font-size: 0.85em;
+    height: 30px;
+    text-align: left;
+    text-indent: 10px;
+    vertical-align: middle;
+}
+tr#reg_item_top {
+    background: url("../images/pieces/item_full_large.png") repeat scroll left top transparent;
+    border-bottom: 1px solid #BBBBBB;
+}
+tr#reg_item_bottom {
+    background: url("../images/pieces/item_full_large.png") repeat scroll left bottom transparent;
+    border-bottom: 1px solid #BBBBBB;
+}
+td#reg_item_del {
+	width:68px; 
+	
+}
+td#reg_item_name 	{ width: 124px; }
+td#reg_item_number 	{ width: 124px;	}
+td#reg_item_stock 	{ width: 68px;		}
+td#reg_item_price 	{ text-indent: 3px;	width: 100px;}
+td#reg_item_qty 		{ text-indent: 3px; width: 60px; }
+td#reg_item_discount { text-indent: 3px;  width: 67px; }
+	
+td#reg_item_total {
+    background: none repeat scroll 0 0 #CCFFCC;
+    font-size: .9em;
+    font-weight: bold;
+    _padding: 0 10px 0 0;
+	padding:0px; 
+    text-align: right;
+	_width: 113px;
+}
+/*
+td#reg_item_price input {	border: 1px solid #CCCCCC; border-radius: 5px 5px 5px 5px; padding: 4px 7px; _width: 68px; }
+td#reg_item_qty input { border: 1px solid #CCCCCC; border-radius: 5px 5px 5px 5px; padding: 4px 7px; width: 28px; }
+td#reg_item_discount input { border: 1px solid #CCCCCC; border-radius: 5px 5px 5px 5px; padding: 4px 7px; _width: 38px; }
+*/
+td#reg_item_price input, 
+td#reg_item_qty input, 
+td#reg_item_discount input {
+	border: 1px solid #CCCCCC; border-radius: 5px 5px 5px 5px; padding: 4px 7px;
+}
+
+
+td#reg_item_update {
+    border-right: medium none;
+}
+td#reg_item_descrip_label {
+    border-right: medium none;
+}
+td#reg_item_descrip {
+    text-indent: 3px;
+}
+td#reg_item_descrip input {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    padding: 4px 7px;
+    width: 350px;
+	width: 370px;
+}
+td#reg_item_serial_label {
+    border-right: medium none;
+}
+td#reg_item_serial {
+    border-right: medium none;
+    text-indent: 3px;
+}
+td#reg_item_serial input {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    padding: 4px 7px;
+    _width: 210px;
+}
+
+table#register td input[type='text'] {display:block; width:70%}
+
+#reg_item_base {
+    background: url("../images/pieces/item_base.png") no-repeat scroll left bottom transparent;
+    height: 10px;
+}
+#suspend_cancel {
+    color: #FFFFFF;
+    font-size: 0.8em;
+    height: 30px;
+    padding-top: 10px;
+}
+#suspend {
+    background: url("../images/pieces/sus_can.png") no-repeat scroll left top transparent;
+    float: left;
+    height: 20px;
+    width: 110px;
+}
+#cancel {
+    background: url("../images/pieces/sus_can.png") no-repeat scroll right top transparent;
+    float: left;
+    height: 20px;
+    width: 110px;
+}
+#suspend div, #cancel div {
+    cursor: pointer;
+    height: 20px;
+    text-indent: 10px;
+    width: 110px;
+}
+#suspend div {
+    background: url("../images/pieces/sus_can.png") no-repeat scroll left bottom transparent;
+}
+#cancel div {
+    background: url("../images/pieces/sus_can.png") no-repeat scroll right bottom transparent;
+}
+#customer_info_filled {
+    background: url("../images/pieces/add_customer_info_filled.png") no-repeat scroll -1px -1px transparent;
+    font-size: 0.8em;
+    height: 90px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    width: 202px;
+}
+#customer_info_empty {
+    background: url("../images/pieces/add_customer_info.png") no-repeat scroll -1px -1px transparent;
+    font-size: 0.8em;
+    height: 90px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    width: 202px;
+}
+#customer_label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+#customer_info_shell #customer {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    padding: 0 5px;
+    width: 163px;
+}
+#add_customer_info {
+}
+#add_customer_info #common_or {
+    float: left;
+    margin-top: 20px;
+    width: 30px;
+}
+#add_customer_info a {
+    color: #FFFFFF;
+    float: left;
+    height: 20px;
+    margin: 15px 0 0;
+    padding: 5px;
+    text-indent: 6px;
+    width: 160px;
+}
+#customer_email{
+	height:50px;
+}
+#email_customer{
+    font-size: 0.75em;
+    padding-left: 10px;
+    position: absolute;
+    top: 155px;
+    width: 200px; 
+	margin-top: 30px;
+}
+
+#supplier {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    padding: 0 5px;
+    width: 163px;
+}
+
+#customer_edit a{
+	float: left;
+    text-align: center;
+    width: 100px;
+	color:#fff;
+	display:block;
+	height:20px;
+}
+#customer_remove{
+}
+#customer_remove a{
+	float: left;
+    text-align: center;
+    width: 90px;
+    margin-left:10px;
+	color:#fff;
+	display:block;
+	height:20px;
+}
+
+#sale_details #sales_items {
+    background: url("../images/pieces/subtotals.png") no-repeat scroll left top transparent;
+    font-size: 0.7em;
+}
+.sales #sale_details #sales_items_total {
+    background: url("../images/pieces/subtotals.png") no-repeat scroll left bottom transparent;
+    border-top: 1px solid #AAAAAA;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 220px;
+}
+.receiving #sale_details #sales_items_total {
+    background: url("../images/pieces/subtotals_recv.png") no-repeat scroll left top transparent;
+    border-bottom: 1px solid #AAAAAA;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0px;
+    width: 220px;
+}
+#sale_details .left {
+    height: 20px;
+    padding: 0 0 0 10px;
+    text-align: left;
+    vertical-align: bottom;
+}
+#sale_details .right {
+    height: 20px;
+    padding: 0 10px 0 0;
+    text-align: right;
+    vertical-align: bottom;
+}
+#sale_details #sales_items_total td {
+    height: 30px;
+    padding: 0 10px;
+    vertical-align: middle;
+}
+#Payment_Types #register {
+    background: url("../images/pieces/payments.png") no-repeat scroll left top transparent;
+}
+#Payment_Types #register th {
+    background: none repeat scroll 0 0 transparent;
+    font-size: 0.6em;
+    font-weight: normal;
+    height: 20px;
+}
+th#pt_amount {
+    border: medium none;
+}
+#Payment_Types #register td {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+td#pt_delete {
+    width: 20px;
+}
+td#pt_delete a {
+    background: url("../images/pieces/x.png") no-repeat scroll center center transparent;
+    display: block;
+    height: 20px;
+    text-indent: -9999px;
+    width: 20px;
+}
+td#pt_delete a:hover {
+    background: url("../images/pieces/x_red.png") no-repeat scroll center center transparent;
+    display: block;
+    height: 20px;
+    text-indent: -9999px;
+    width: 20px;
+}
+td#pt_amount {
+    border: medium none;
+    padding-right: 10px;
+    text-align: right;
+}
+#amount_due {
+    border-bottom: 1px solid #BBBBBB;
+    border-top: 1px solid #BBBBBB;
+    width: 220px;
+}
+#amount_due td {
+    background: none repeat scroll 0 0 #FFFF88;
+    height: 30px;
+    padding: 0 10px;
+}
+#amount_due .covered td {
+    background: none repeat scroll 0 0 #88FF88;
+}
+#make_payment {
+    background: url("../images/pieces/payments.png") no-repeat scroll left bottom transparent;
+    font-size: 0.95em;
+    width: 220px;
+}
+#make_payment_table {
+    margin: auto;
+    width: 200px;
+}
+#make_payment_table td {
+    vertical-align: middle;
+}
+#mpt_top {
+    height: 30px;
+}
+#mpt_top td {
+    vertical-align: middle;
+}
+#mpt_bottom {
+    height: 40px;
+}
+#mpt_bottom td {
+    vertical-align: top;
+}
+#add_payment_button span {
+    background: url("../images/pieces/add_payment.png") no-repeat scroll -10px -10px transparent;
+    color: #FFFFFF;
+    display: block;
+    height: 25px;
+    margin: 0 auto;
+    padding-top: 5px;
+    text-align: center;
+    width: 200px;
+    cursor:pointer;
+}
+#add_payment_button {
+    padding-bottom: 10px;
+}
+
+#add_shipping_button span {
+    background: url("../images/pieces/add_payment.png") no-repeat scroll -10px -10px transparent;
+    color: #FFFFFF;
+    display: block;
+    height: 25px;
+    margin: 0 auto;
+    padding-top: 5px;
+    text-align: center;
+    width: 200px;
+    cursor:pointer;
+}
+#add_shipping_button {
+    padding-bottom: 10px;
+}
+
+#make_payment #tender {
+    text-align: right;
+}
+#make_payment #tender input {
+    border: 1px solid #999999;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 1.5em;
+    padding: 2px 5px;
+    text-align: right;
+    width: 190px;
+}
+
+#comment_label{
+    font-size: 0.75em;
+}
+textarea#comment{
+	width: 220px;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #CCCCCC;
+	background: none repeat scroll 0 0 transparent;
+	min-height: 60px;
+}
+
+#finish_sale_button span{
+    background: url("../images/pieces/complete_sale.png") no-repeat scroll -10px -10px transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    padding-top: 5px;
+    text-align: center;
+    width: 220px;
+}
+
+/* Sales */
+#suspend_cancel > #suspend{ 
+	visibility: hidden; 
+}
+
+#suspend_cancel > #cancel{ 
+	visibility: hidden; 
+}
+
+#reg_item_update input[type="submit"]{
+    background: url("../images/pieces/btnUpdate.png") no-repeat top left transparent;
+    color: #FFFFFF;
+    display: block;
+    height: 24px;
+	margin: 0 auto;
+	border: 0px;
+	width: 70px;
+    text-align: center;
+}
+
+#add_payment_text
+{
+	font-size: .85em;
+}
+#payment_types
+{
+    font-size: 1.50em;
+}
+

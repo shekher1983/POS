@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+    <package name="config" extends="default" namespace="/config">
+        <default-interceptor-ref name="crudStack"/>
+        <default-action-ref name="config"/>
+        <action name="config" class="com.chandra.pos.web.config.ConfigAction">
+            <result>config.jsp</result>
+        </action>
+        <action name="update" class="com.chandra.pos.web.config.ConfigAction" method="doUpdate">
+            <result name="input">config.jsp</result>
+        </action>
+    </package>
+
+</struts>

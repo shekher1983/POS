@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+    <package name="items" extends="default" namespace="/items">
+        <default-interceptor-ref name="crudStack"/>
+
+        <default-action-ref name="home"/>
+        <action name="new" class="com.chandra.pos.web.item.action.ItemAction" method="doNew">
+            <result name="input">/items/new.jsp</result>
+        </action>
+
+        <action name="save" class="com.chandra.pos.web.item.action.ItemAction" method="doSave">
+            <interceptor-ref name="tokenStack"/>
+            <result type="redirect">/items/</result>
+            <result name="input">/items/new.jsp</result>
+        </action>
+        <action name="edit" class="com.chandra.pos.web.item.action.ItemAction" method="doEdit">
+            <result name="input">/items/edit.jsp</result>
+        </action>
+        <action name="update" class="com.chandra.pos.web.item.action.ItemAction" method="doUpdate">
+            <interceptor-ref name="tokenStack"/>
+            <result name="input">/items/edit.jsp</result>
+            <result type="redirect">/items/</result>
+        </action>
+        <action name="home" class="com.chandra.pos.web.item.action.ItemAction" method="doHome">
+            <result name="success">/items/home.jsp</result>
+        </action>
+        <action name="list" class="com.chandra.pos.web.item.action.ItemAction" method="doList">
+            <result name="success">/items/list.jsp</result>
+        </action>
+        <action name="suggest" class="com.chandra.pos.web.item.action.ItemAction" method="doSuggest">
+            <result name="success">/items/suggest.jsp</result>
+        </action>
+        <action name="search" class="com.chandra.pos.web.item.action.ItemAction" method="doSearch">
+            <result name="success">/items/search.jsp</result>
+        </action>
+        <action name="home" class="com.chandra.pos.web.item.action.ItemAction" method="doHome">
+            <result name="success">/items/home.jsp</result>
+        </action>
+
+
+    </package>
+
+
+    <!-- END SNIPPET: xworkSample -->
+
+
+</struts>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+
+
+    <package name="customers" extends="default" namespace="/customers">
+        <default-interceptor-ref name="crudStack"/>
+        <default-action-ref name="home"/>
+
+        <action name="save" class="com.chandra.pos.web.customer.action.CustomerAction" method="doSave">
+            <interceptor-ref name="tokenStack"/>
+            <result type="redirect">/customers/</result>
+            <result name="input">/customers/new.jsp</result>
+        </action>
+        <action name="edit" class="com.chandra.pos.web.customer.action.CustomerAction" method="doEdit">
+            <result name="input">/customers/edit.jsp</result>
+        </action>
+
+        <action name="update" class="com.chandra.pos.web.customer.action.CustomerAction" method="doUpdate">
+            <interceptor-ref name="tokenStack"/>
+            <result type="redirect">/customers/</result>
+            <result name="input">/customers/edit.jsp</result>
+        </action>
+        <action name="new" class="com.chandra.pos.web.customer.action.CustomerAction" method="doNew">
+            <result name="input">/customers/new.jsp</result>
+        </action>
+
+        <action name="home" class="com.chandra.pos.web.customer.action.CustomerAction" method="doHome">
+            <result name="success">/customers/home.jsp</result>
+        </action>
+        <action name="list" class="com.chandra.pos.web.customer.action.CustomerAction" method="doList">
+            <result name="success">/customers/list.jsp</result>
+        </action>
+        <action name="suggest" class="com.chandra.pos.web.customer.action.CustomerAction" method="doSuggest">
+            <result name="success">/customers/suggest.jsp</result>
+        </action>
+        <action name="search" class="com.chandra.pos.web.customer.action.CustomerAction" method="doSearch">
+            <result name="success">/customers/search.jsp</result>
+        </action>
+
+    </package>
+
+
+</struts>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cities>
+    <city label="Hariharganj" value="Hariharganj" country="India" />
+    <city label="Saraiya" value="Saraiya" country="India" />
+    <city label="Salaiya" value="Salaiya" country="India" />
+    <city label="Pipra" value="Pipra" country="India" />
+    <city label="Dalpatpur" value="Dalpatpur" country="India" />
+    <city label="Babhandih" value="Babhandih" country="India" />
+    <city label="Dema" value="Dema" country="India" />
+    <city label="Belodar" value="Belodar" country="India" />
+    <city label="Kulahiya" value="Kulahiya" country="India" />
+    <city label="Madhubana" value="Madhubana" country="India" />
+    <city label="Tendua" value="Tendua" country="India" />
+    <city label="Sarsot" value="Sarsot" country="India" />
+    <city label="Khadagpur" value="Khadagpur" country="India" />
+    <city label="Kataiya" value="Kataiya" country="India" />
+    <city label="Satgawa " value="Satgawa" country="India" />
+    <city label="Arruwa Khurd" value="Arruwa Khurd" country="India" />
+    <city label="Dhakcha" value="Dhakcha" country="India" />
+    <city label="Semarwar" value="Semarwar" country="India" />
+</cities>

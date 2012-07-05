@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+    <package name="receipts" extends="default" namespace="/receipts">
+        <default-interceptor-ref name="crudStack"/>
+        <action name="orderreceipt" class="com.chandra.pos.web.receipt.action.ReceiptAction" method="doOrderReceipt">
+            <result>orderreceipt.jsp</result>
+        </action>
+        <action name="paymentreceipt" class="com.chandra.pos.web.receipt.action.ReceiptAction"
+                method="doPaymentReceipt">
+            <result>paymentreceipt.jsp</result>
+        </action>
+
+    </package>
+
+</struts>

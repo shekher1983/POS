@@ -1,0 +1,130 @@
+body {
+    font-family: "Lucida Grande",Arial;
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    border: medium none;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    position: relative;
+    width: 380px;
+}
+#top {
+    background-image: url("../images/login/login.png");
+    background-position: 0 0;
+    height: 140px;
+	text-align: center;
+}
+#top img
+{
+	position: relative;
+	top: 45px;
+}
+#form_field_username, #form_field_password, #form_field_password_confirm {
+    height: 50px;
+}
+#form_field_submit {
+    height: 60px;
+}
+#login_form {
+}
+#bottom {
+    background-image: url("../images/login/login.png");
+    background-position: left bottom;
+    color: #FFFFFF;
+    font-size: 0.7em;
+    font-weight: normal;
+    width: 380px;
+}
+#bottom td{
+    height: 30px;
+    padding: 3px 20px 0;
+    vertical-align: top;
+}
+#bottom a{
+	color:#8ac;
+	text-decoration:none;
+}
+#bottom a:hover{
+	color:#fff;
+}
+#bottom #left{
+	text-align:left;
+}
+#bottom #right{
+	text-align:right;
+}
+#welcome_message {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+.form_field_label {
+    background-image: url("../images/login/login.png");
+    background-position: left -140px;
+    color: #555555;
+    padding-left: 20px;
+    width: 90px;
+}
+.form_field {
+    background-image: url("../images/login/login.png");
+    background-position: right -140px;
+    padding-left: 10px;
+    width: 280px;
+}
+#submit_button {
+    background-image: url("../images/login/login.png");
+    background-position: right -240px;
+    padding-left: 10px;
+    width: 280px;
+}
+#submit_button input {
+    cursor: pointer;
+    padding: 10px 0;
+    text-align: center;
+    width: 360px;
+    color:#fff;
+}
+#submit_button:hover {
+    background-image: url("../images/login/login.png");
+    background-position: right -300px;
+}
+input {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    font-size: 1em;
+    width: 235px;
+}
+.top_message {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    color: #999999;
+    margin: auto;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.top_message_error {
+    background: none repeat scroll 0 0 #FFCCCC;
+    border-bottom: 1px solid #CC4444;
+    border-top: 1px solid #CC4444;
+    color: #880000;
+    margin: auto;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

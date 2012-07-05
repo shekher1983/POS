@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+    <package name="employees" extends="default" namespace="/employees">
+        <default-interceptor-ref name="crudStack"/>
+        <default-action-ref name="home"/>
+
+        <action name="save" class="com.chandra.pos.web.employee.action.EmployeeAction" method="doSave">
+            <interceptor-ref name="tokenStack"/>
+            <result type="redirect">/employees/</result>
+            <result name="input">/employees/new.jsp</result>
+        </action>
+        <action name="edit" class="com.chandra.pos.web.employee.action.EmployeeAction" method="doEdit">
+            <result name="input">/employees/edit.jsp</result>
+        </action>
+
+        <action name="update" class="com.chandra.pos.web.employee.action.EmployeeAction" method="doUpdate">
+            <interceptor-ref name="tokenStack"/>
+            <result name="input">/employees/edit.jsp</result>
+            <result type="redirect">/employees/</result>
+        </action>
+        <action name="new" class="com.chandra.pos.web.employee.action.EmployeeAction" method="doNew">
+            <result name="input">/employees/new.jsp</result>
+        </action>
+        <action name="list" class="com.chandra.pos.web.employee.action.EmployeeAction" method="doList">
+            <result name="success">/employees/list.jsp</result>
+        </action>
+        <action name="search" class="com.chandra.pos.web.employee.action.EmployeeAction" method="doSearch">
+            <result name="success">/employees/list.jsp</result>
+        </action>
+        <action name="home" class="com.chandra.pos.web.employee.action.EmployeeAction" method="doHome">
+            <result name="success">/employees/home.jsp</result>
+
+        </action>
+
+
+    </package>
+</struts>

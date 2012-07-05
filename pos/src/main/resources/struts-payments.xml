@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+    <package name="payments" extends="default" namespace="/payments">
+        <default-interceptor-ref name="crudStack"/>
+        <default-action-ref name="home"/>
+
+        <action name="new" class="com.chandra.pos.web.payment.action.PaymentAction" method="doNew">
+            <result name="input">/payments/new.jsp</result>
+        </action>
+        <action name="delete" class="com.chandra.pos.web.payment.action.PaymentAction" method="doDelete">
+            <result name="success">/payments/delete.jsp</result>
+        </action>
+        <action name="edit" class="com.chandra.pos.web.payment.action.PaymentAction" method="doEdit">
+            <result name="input">/payments/edit.jsp</result>
+        </action>
+        <action name="update" class="com.chandra.pos.web.payment.action.PaymentAction" method="doUpdate">
+            <result name="success">/payments/update.jsp</result>
+            <result name="input">/payments/edit.jsp</result>
+        </action>
+        <action name="save" class="com.chandra.pos.web.payment.action.PaymentAction" method="doSave">
+            <result name="success" type="redirectAction">
+                <param name="actionName">paymentreceipt</param>
+                <param name="namespace">/receipts</param>
+                <param name="id">${paymentEntity.id}</param>
+            </result>
+            <result name="input">/payments/new.jsp</result>
+        </action>
+
+        <action name="home" class="com.chandra.pos.web.payment.action.PaymentAction" method="doHome">
+            <result name="success">/payments/home.jsp</result>
+        </action>
+        <action name="list" class="com.chandra.pos.web.payment.action.PaymentAction" method="doList">
+            <result name="success">/payments/list.jsp</result>
+        </action>
+        <action name="search" class="com.chandra.pos.web.payment.action.PaymentAction" method="doSearch">
+            <result name="success">/payments/search.jsp</result>
+        </action>
+        <action name="receipt" class="com.chandra.pos.web.payment.action.PaymentAction" method="doReceipt">
+            <result name="success">/payments/receipt.jsp</result>
+        </action>
+
+    </package>
+
+
+</struts>
